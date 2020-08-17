@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    
-    </head>
-    <body>
-        <h1>Outside!</h1>
-        {% block content %}
-        {% endblock %}
-    </body>
+<head>
+    <!-- IMPORT GOOGLE ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- IMPORT MATERIALIZE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <title>Task Manager</title>
+</head>
+
+<body>
+    <h1>Outside!</h1>
+    {% block content %}
+    {% endblock %}
+
+    <!-- IMPORT JQUERY (DEPENDENCY OF MATERIALIZE CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- IMPORT MATERIALIZE JAVASCRIPT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- INITIALIZE JAVASCRIPT IN CHILD HTML'S -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+        })
+    </script>
+</body>
 </html>
